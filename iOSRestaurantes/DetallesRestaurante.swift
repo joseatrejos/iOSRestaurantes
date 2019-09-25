@@ -8,11 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class DetallesRestaurante: UIViewController {
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        self.title = "Restaurantes"
     }
 }
