@@ -116,14 +116,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-th-Tgi">
-                                <rect key="frame" x="20" y="230" width="176" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-th-Tgi">
+                                <rect key="frame" x="20" y="230" width="67.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contenido Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKS-ty-SqN">
-                                <rect key="frame" x="20" y="252.5" width="210" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenido Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKS-ty-SqN">
+                                <rect key="frame" x="20" y="252.5" width="174.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,10 +137,12 @@
                             <constraint firstItem="TXY-py-YzY" firstAttribute="top" secondItem="rNw-Ac-51c" secondAttribute="top" constant="15" id="QGw-o2-qni"/>
                             <constraint firstItem="QP2-th-Tgi" firstAttribute="top" secondItem="0CR-42-7rP" secondAttribute="bottom" constant="20" id="VdG-sf-aW6"/>
                             <constraint firstItem="NT4-lb-49E" firstAttribute="top" secondItem="hQu-Lx-aDM" secondAttribute="bottom" constant="20" id="Xli-dt-0CW"/>
+                            <constraint firstItem="QP2-th-Tgi" firstAttribute="leading" secondItem="rNw-Ac-51c" secondAttribute="leading" constant="20" id="bib-By-Ixx"/>
                             <constraint firstItem="hQu-Lx-aDM" firstAttribute="top" secondItem="TXY-py-YzY" secondAttribute="bottom" constant="8" id="dHB-4t-Fda"/>
                             <constraint firstItem="NT4-lb-49E" firstAttribute="leading" secondItem="rNw-Ac-51c" secondAttribute="leading" constant="20" id="jrf-ey-ea9"/>
                             <constraint firstItem="0CR-42-7rP" firstAttribute="leading" secondItem="rNw-Ac-51c" secondAttribute="leading" constant="20" id="ooH-Cw-0I9"/>
                             <constraint firstItem="0CR-42-7rP" firstAttribute="top" secondItem="NT4-lb-49E" secondAttribute="bottom" constant="8" id="v1M-CW-L4o"/>
+                            <constraint firstItem="GKS-ty-SqN" firstAttribute="leading" secondItem="rNw-Ac-51c" secondAttribute="leading" constant="20" id="wFY-gJ-E44"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rNw-Ac-51c"/>
                     </view>
