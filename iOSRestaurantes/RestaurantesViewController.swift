@@ -10,6 +10,7 @@ import UIKit
 
 class RestaurantesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableViewRestaurantes: UITableView!
     var restaurantes : [Restaurante] = []
     
     override func viewDidLoad() {
@@ -30,5 +31,13 @@ class RestaurantesViewController: UIViewController, UITableViewDataSource, UITab
         celda?.textLabel?.text = restaurantes[indexPath.row].nombre
 
         return celda!
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetallesRestaurante"
+        {
+            let destino = segue.destination as? DetallesRestaurante
+            destino?.restaurante = restaurantes[tableViewRestaurantes.indexPathForSelectedRow!.row]
+        }
     }
 }

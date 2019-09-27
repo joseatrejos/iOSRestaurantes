@@ -17,6 +17,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FKz-dM-8tC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h33-EA-Eg8"/>
@@ -26,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-1819" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurantes View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSRestaurantes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RestaurantesViewController" customModule="iOSRestaurantes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +56,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="lBk-t7-aOa" kind="show" id="vkx-GU-Sys"/>
+                                            <segue destination="lBk-t7-aOa" kind="show" identifier="goToDetallesRestaurante" id="vkx-GU-Sys"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -75,15 +76,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="A1Y-Xe-c2P"/>
+                    <connections>
+                        <outlet property="tableViewRestaurantes" destination="5to-nl-BAS" id="3IP-Me-UUE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-897.10144927536237" y="133.92857142857142"/>
         </scene>
-        <!--Restaurantes View Controller-->
+        <!--Detalles Restaurante-->
         <scene sceneID="iAe-dO-JLH">
             <objects>
-                <viewController id="lBk-t7-aOa" customClass="RestaurantesViewController" customModule="iOSRestaurantes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lBk-t7-aOa" customClass="DetallesRestaurante" customModule="iOSRestaurantes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OMY-jr-r3D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,8 +110,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contenido Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CR-42-7rP">
-                                <rect key="frame" x="20" y="189" width="289" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contenido Teléfono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CR-42-7rP">
+                                <rect key="frame" x="20" y="189" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -135,10 +139,16 @@
                             <constraint firstItem="NT4-lb-49E" firstAttribute="top" secondItem="hQu-Lx-aDM" secondAttribute="bottom" constant="20" id="Xli-dt-0CW"/>
                             <constraint firstItem="hQu-Lx-aDM" firstAttribute="top" secondItem="TXY-py-YzY" secondAttribute="bottom" constant="8" id="dHB-4t-Fda"/>
                             <constraint firstItem="NT4-lb-49E" firstAttribute="leading" secondItem="rNw-Ac-51c" secondAttribute="leading" constant="20" id="jrf-ey-ea9"/>
+                            <constraint firstItem="0CR-42-7rP" firstAttribute="leading" secondItem="rNw-Ac-51c" secondAttribute="leading" constant="20" id="ooH-Cw-0I9"/>
                             <constraint firstItem="0CR-42-7rP" firstAttribute="top" secondItem="NT4-lb-49E" secondAttribute="bottom" constant="8" id="v1M-CW-L4o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rNw-Ac-51c"/>
                     </view>
+                    <connections>
+                        <outlet property="lblDescripcion" destination="GKS-ty-SqN" id="QYN-uy-5ya"/>
+                        <outlet property="lblDireccion" destination="hQu-Lx-aDM" id="ToM-49-kBZ"/>
+                        <outlet property="lblTelefono" destination="0CR-42-7rP" id="VY2-De-QnU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfx-Fn-Kyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
