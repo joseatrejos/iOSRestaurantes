@@ -20,8 +20,8 @@ class DetallesRestaurante: UIViewController {
         
         self.title = restaurante!.nombre
         
-        lblDireccion.text = "\(restaurante!.direccion)"
+        lblDireccion.text = restaurante!.direccion
         lblTelefono.text = "\(restaurante!.telefono)"
-        lblDescripcion.text = "\(restaurante!.descripcion)"
+        lblDescripcion.text = restaurante!.descripcion
     }
 }
